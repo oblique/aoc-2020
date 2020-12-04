@@ -3,6 +3,7 @@ name = "aoc-2020"
 version = "0.0.0"
 authors = ["oblique <psyberbits@gmail.com>"]
 edition = "2018"
+publish = false
 
 [dependencies]
 anyhow = "1"
