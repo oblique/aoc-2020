@@ -25,7 +25,7 @@ fn is_valid_num(preamble: &[u64], num: u64) -> bool {
 
 fn find_invalid_num(buf: &[u64]) -> Result<u64> {
     for i in 25..buf.len() {
-        let preamble = &buf[i - 25..i + 25];
+        let preamble = &buf[i - 25..i];
         let num = buf[i];
 
         if !is_valid_num(preamble, num) {
