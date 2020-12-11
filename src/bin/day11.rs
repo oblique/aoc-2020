@@ -50,7 +50,7 @@ fn count_occupied_seats(
             if x2 < 0
                 || y2 < 0
                 || x2 as usize >= layout.len()
-                || y2 as usize >= layout[0].len()
+                || y2 as usize >= layout[x2 as usize].len()
             {
                 break;
             }
@@ -78,7 +78,7 @@ fn round(
     let saved_layout = layout.clone();
 
     for i in 0..layout.len() {
-        for j in 0..layout[0].len() {
+        for j in 0..layout[i].len() {
             let cur_seat = saved_layout[i][j];
             let occupied_seats =
                 count_occupied_seats(&saved_layout, i, j, limit);
